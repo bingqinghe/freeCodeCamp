@@ -1,0 +1,252 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+:root {
+  --background-color: #eee;
+  --gray-background-color: #ddd;
+  --wording-color: #000;
+  --icon-color: darkorange;
+  --button-color: #f1c40f;
+  --button-color-hover: orange;
+  --copyright-color: #444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: 'Lato', sans-serif;
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--wording-color);
+  text-decoration: none;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  min-height: 75px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  background-color: var(--background-color);
+}
+.logo {
+  width: 60vw;
+}
+.logo > img {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+}
+.nav-bar {
+  display: flex;
+  left: auto;
+  gap: 200px;
+  font-weight: 400;
+}
+.nav-link {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.container {
+  margin-top: 75px;
+  width: 100%;
+}
+
+.submit-button {
+  background-color: var(--button-color);
+  color: var(--wording-color);
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 0 20px;
+}
+.submit-button:hover {
+  background-color: var(--button-color-hover);
+}
+
+#sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 200px;
+}
+#sign-up > h2 {
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+#sign-up#form {
+  display: flex;
+  flex-direction: column;
+}
+#sign-up input[type='email'] {
+  width: 100%;
+  max-width: 275px;
+  padding: 5px;
+  margin-bottom: 15px;
+  height: 30px;
+}
+#sign-up input[type='submit'] {
+  width: 100%;
+  max-width: 175px;
+}
+
+.main-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#features {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.feature-lists {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  width: 80vw;
+}
+.feature-lists .icon{
+  color: var(--icon-color);
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 20vw;
+}
+.feature-lists .description{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  text-align: left;
+}
+
+#how-it-works {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+#how-it-works > iframe {
+  max-width: 560px;
+  width: 100%;
+}
+
+#pricing {
+  display:flex;
+  gap: 10px;
+  width: 80%;
+  justify-content: center;
+}
+.product {
+  border: 1px solid var(--wording-color);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  color: black;
+  max-width: 400px;
+  gap: 15px;
+}
+.product .product-title {
+  background-color: var(--gray-background-color);
+  padding: 15px 0;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.product .product-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.product .submit-button {
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+footer {
+  margin: 30px auto 0 auto;
+  width: 80%;
+  background-color: var(--gray-background-color);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+footer > ul {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 20px 0 0;
+  gap: 20px;
+  justify-content: flex-end;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+footer .copyright {
+  text-align: end;
+  color: var(--copyright-color);
+  padding-right: 15px;
+  padding-bottom: 15px;
+  font-size: 0.9em;
+}
+
+@media (max-width: 800px) {
+  #pricing {
+    flex-direction: column;
+  }
+  .product {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  .nav-bar {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 550px) {
+  #features .desc {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    height: 150px;
+  }
+  .nav-bar {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 650px) {
+  #features {
+    margin-top: 0;
+  }
+}
